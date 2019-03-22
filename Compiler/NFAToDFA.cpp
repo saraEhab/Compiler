@@ -54,7 +54,9 @@ bool NFAToDFA::isAcceptance(Node node) {
     return node.getStatus();
 }
 
-void NFAToDFA::setDifferentEdgeValues() {}
+void NFAToDFA::setDifferentEdgeValues() {
+    differentEdgeValues = nonFiniteAutomata.getDifferentEdgeValues();
+}
 
 Node NFAToDFA::getDFARoot() {}
 
