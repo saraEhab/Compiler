@@ -1,6 +1,8 @@
 #include <iostream>
+#include "NFAToDFAEngine.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    NFAToDFAEngine nfaToDFAEngine;
+    nfaToDFAEngine.engine();
     return 0;
 }
