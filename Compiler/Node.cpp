@@ -34,3 +34,11 @@ void Node::setEdgeValue(string edge) {
 vector<string> Node::getEdgeValue() {
     return edgeValue;
 }
+
+void Node::setType(string typeValue) {
+    type = typeValue;
+}
+
+string Node::getType() {
+    return type;
+}

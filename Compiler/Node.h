@@ -15,6 +15,7 @@ class Node {
 private:
     bool status;/*0 means internal node 1 means acceptance node*/
     int index;/*index of the node*/
+    string type="";/*defines the acceptance node type as id,num,if, then ,....*/
     vector<Node> children;
     vector<string> edgeValue;
 
@@ -34,6 +35,10 @@ public:
     void setEdgeValue(string edge);
 
     vector<string> getEdgeValue();
+
+    void setType(string typeValue);
+
+    string getType();
 
 };
 
