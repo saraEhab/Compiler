@@ -13,7 +13,21 @@ void NFAToDFA::setDFANodeIndex(Node DFANode) {
     lastTakenIndex++;
 }
 
-vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode, Node parent) {}
+vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode, Node parent) {
+    vector<Node> nfaChildren = nfaNode.getChildren();
+    vector<string> edgeValues = nfaNode.getEdgeValue();
+    vector<Node> twins;
+    twins.push_back(nfaNode);
+    for (int i = 0; i < edgeValues.size(); ++i) {
+        if (edgeValues[i] == "&") {
+            twins.push_back(nfaChildren[i]);
+        }
+        if (isAcceptance(nfaChildren[i])) {
+            dfaNode.setStatus(true);
+        }
+    }
+    return twins;
+}
 
 int NFAToDFA::isNodeExists(vector<Node> twins) {}
 
