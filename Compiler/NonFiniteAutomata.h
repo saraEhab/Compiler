@@ -17,6 +17,8 @@ private:
 public:
     Node getNFARoot();
 
+    void setNFARoot(Node nfaRoot);
+
     void setDifferentEdgeValues(string edgeValue);
 
     vector<string> getDifferentEdgeValues();

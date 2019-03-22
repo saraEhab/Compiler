@@ -12,6 +12,10 @@ void NonFiniteAutomata::setDifferentEdgeValues(string edgeValue) {
     differentEdgeValues.push_back(edgeValue);
 }
 
+void NonFiniteAutomata::setNFARoot(Node nfaRoot) {
+    root=nfaRoot;
+}
+
 vector<string> NonFiniteAutomata::getDifferentEdgeValues() {
     return differentEdgeValues;
 }
