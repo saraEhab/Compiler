@@ -29,7 +29,26 @@ vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode, Node parent) {
     return twins;
 }
 
-int NFAToDFA::isNodeExists(vector<Node> twins) {}
+int NFAToDFA::isNodeExists(vector<Node> twins) {
+    vector<Node> twin_i;
+    int index = -1;
+    for (int i = 0; i < nodeTwins.size(); ++i) {
+        twin_i = nodeTwins[i];
+        if (twin_i.size() == twins.size()) {
+            for (int j = 0; j < twin_i.size(); ++j) {
+                if (twin_i[j].getIndex() != twins[j].getIndex()) {
+                    index = -1;
+                    break;
+                } else {
+                    index = i;
+                }
+            }
+        }
+        return index;
+    }
+
+
+}
 
 bool NFAToDFA::isAcceptance(Node node) {}
 
