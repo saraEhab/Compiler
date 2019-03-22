@@ -4,9 +4,6 @@
 
 #include "NonFiniteAutomata.h"
 
-Node root;
-vector<string> differentEdgeValues;
-
 Node NonFiniteAutomata::getNFARoot() {
     return root;
 }
