@@ -122,6 +122,33 @@ Compiler/fast:
 	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/build
 .PHONY : Compiler/fast
 
+DFA.obj: DFA.cpp.obj
+
+.PHONY : DFA.obj
+
+# target to build an object file
+DFA.cpp.obj:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/DFA.cpp.obj
+.PHONY : DFA.cpp.obj
+
+DFA.i: DFA.cpp.i
+
+.PHONY : DFA.i
+
+# target to preprocess a source file
+DFA.cpp.i:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/DFA.cpp.i
+.PHONY : DFA.cpp.i
+
+DFA.s: DFA.cpp.s
+
+.PHONY : DFA.s
+
+# target to generate assembly for a file
+DFA.cpp.s:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/DFA.cpp.s
+.PHONY : DFA.cpp.s
+
 DFAAndTokens.obj: DFAAndTokens.cpp.obj
 
 .PHONY : DFAAndTokens.obj
@@ -293,6 +320,9 @@ help:
 	@echo ... Compiler
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... DFA.obj
+	@echo ... DFA.i
+	@echo ... DFA.s
 	@echo ... DFAAndTokens.obj
 	@echo ... DFAAndTokens.i
 	@echo ... DFAAndTokens.s

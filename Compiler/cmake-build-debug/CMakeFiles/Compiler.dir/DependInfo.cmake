@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.cpp" "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/DFA.cpp.obj"
   "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.cpp" "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/DFAAndTokens.cpp.obj"
   "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.cpp" "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/MinDFA.cpp.obj"
   "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp" "E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir/NFAToDFA.cpp.obj"

@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h">
+			<Option target="Compiler"/>
+		</Unit>
 		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.cpp">
 			<Option target="Compiler"/>
 		</Unit>

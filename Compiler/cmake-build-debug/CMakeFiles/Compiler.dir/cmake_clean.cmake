@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Compiler.dir/NFAToDFA.cpp.obj"
   "CMakeFiles/Compiler.dir/MinDFA.cpp.obj"
   "CMakeFiles/Compiler.dir/DFAAndTokens.cpp.obj"
+  "CMakeFiles/Compiler.dir/DFA.cpp.obj"
   "Compiler.pdb"
   "Compiler.exe"
   "Compiler.exe.manifest"
