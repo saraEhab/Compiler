@@ -50,7 +50,9 @@ int NFAToDFA::isNodeExists(vector<Node> twins) {
 
 }
 
-bool NFAToDFA::isAcceptance(Node node) {}
+bool NFAToDFA::isAcceptance(Node node) {
+    return node.getStatus();
+}
 
 void NFAToDFA::setDifferentEdgeValues() {}
 
