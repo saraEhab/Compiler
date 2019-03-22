@@ -4,7 +4,7 @@
 
 #ifndef COMPILER_DFAANDTOKENS_H
 #define COMPILER_DFAANDTOKENS_H
-
+using namespace std;
 
 class DFAAndTokens {
 

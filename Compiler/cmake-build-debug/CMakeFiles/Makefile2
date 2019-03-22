@@ -58,10 +58,10 @@ RM = "E:\clion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\3rd year 2nd semester\compiler\project\Compiler"
+CMAKE_SOURCE_DIR = "E:\3rd year 2nd semester\compiler\project\git\Compiler\Compiler"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\3rd year 2nd semester\compiler\project\Compiler\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\3rd year 2nd semester\compiler\project\git\Compiler\Compiler\cmake-build-debug"
 
 #=============================================================================
 # Target rules for target CMakeFiles/Compiler.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = "E:\3rd year 2nd semester\compiler\project\Compiler\cmake-bui
 CMakeFiles/Compiler.dir/all:
 	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/depend
 	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\3rd year 2nd semester\compiler\project\Compiler\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target Compiler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\3rd year 2nd semester\compiler\project\git\Compiler\Compiler\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7 "Built target Compiler"
 .PHONY : CMakeFiles/Compiler.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/Compiler.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Compiler.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\3rd year 2nd semester\compiler\project\Compiler\cmake-build-debug\CMakeFiles" 7
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\3rd year 2nd semester\compiler\project\git\Compiler\Compiler\cmake-build-debug\CMakeFiles" 7
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Compiler.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\3rd year 2nd semester\compiler\project\Compiler\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\3rd year 2nd semester\compiler\project\git\Compiler\Compiler\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Compiler.dir/rule
 
 # Convenience name for target.

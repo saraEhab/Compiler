@@ -4,7 +4,7 @@
 
 #ifndef COMPILER_MINDFA_H
 #define COMPILER_MINDFA_H
-
+using namespace std;
 
 class MinDFA {
 

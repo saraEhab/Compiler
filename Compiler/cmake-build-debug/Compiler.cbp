@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug"/>
+				<Option working_dir="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Compiler">
-				<Option output="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug"/>
+				<Option output="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Compiler/fast">
-				<Option output="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug"/>
+				<Option output="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Compiler.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,67 +53,67 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/include-fixed"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 Compiler/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug"/>
+				<Option working_dir="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug"/>
+				<Option working_dir="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/DFAAndTokens.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/DFAAndTokens.h">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/MinDFA.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/MinDFA.h">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/NFAToDFA.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/NFAToDFA.h">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/Node.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/Node.h">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/NonFiniteAutomata.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/NonFiniteAutomata.h">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/main.cpp">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/main.cpp">
 			<Option target="Compiler"/>
 		</Unit>
-		<Unit filename="E:/3rd year 2nd semester/compiler/project/Compiler/CMakeLists.txt">
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

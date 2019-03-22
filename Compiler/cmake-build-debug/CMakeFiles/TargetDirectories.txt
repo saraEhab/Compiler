@@ -1,3 +1,3 @@
-E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir
-E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/3rd year 2nd semester/compiler/project/Compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/Compiler.dir
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
