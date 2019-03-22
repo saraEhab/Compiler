@@ -4,10 +4,14 @@
 
 #ifndef COMPILER_NONFINITEAUTOMATA_H
 #define COMPILER_NONFINITEAUTOMATA_H
+
+#include "Node.h"
+
 using namespace std;
 
 class NonFiniteAutomata {
 
+    Node getNFA();
 };
 
 

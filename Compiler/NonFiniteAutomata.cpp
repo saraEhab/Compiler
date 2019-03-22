@@ -3,3 +3,8 @@
 //
 
 #include "NonFiniteAutomata.h"
+
+Node root;
+Node NonFiniteAutomata::getNFA() {
+    return root;
+}
