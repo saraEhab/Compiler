@@ -107,4 +107,6 @@ vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent)
     return headings;
 }
 
-void NFAToDFA::setNodeTwins(vector<Node> twins) {}
+void NFAToDFA::setNodeTwins(vector<Node> twins) {
+    nodeTwins.push_back(twins);
+}
