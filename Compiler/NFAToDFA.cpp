@@ -84,13 +84,27 @@ void NFAToDFA::makeChildren(Node DFANode) {
                 setDFANodeIndex(child);
                 DFANode.setChild(child);
                 DFA.push_back(child);
-            }else{
+            } else {
                 DFANode.setChild(DFA[index]);
             }
         }
     }
 }
 
-vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent) {}
+vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent) {
+    vector<Node> headings;
+    vector<string> edgeValues;
+    int parentIndex = parent.getIndex();
+    vector<Node> twins = nodeTwins[parentIndex];
+    for (int i = 0; i < twins.size(); ++i) {
+        edgeValues = twins[i].getEdgeValue();
+        for (int j = 0; j < edgeValues.size(); ++j) {
+            if (edgeValues[j] == inputValue) {
+                headings.push_back(twins[i].getChildren()[j]);
+            }
+        }
+    }
+    return headings;
+}
 
 void NFAToDFA::setNodeTwins(vector<Node> twins) {}
