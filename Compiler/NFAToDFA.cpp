@@ -4,8 +4,9 @@
 
 #include "NFAToDFA.h"
 
-void NFAToDFA::getNFARoot() {
+Node NFAToDFA::getNFARoot() {
     nfaRoot = nonFiniteAutomata.getNFARoot();
+    return nfaRoot;
 }
 
 void NFAToDFA::setDFANodeIndex(Node DFANode) {
@@ -13,7 +14,11 @@ void NFAToDFA::setDFANodeIndex(Node DFANode) {
     lastTakenIndex++;
 }
 
-vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode, Node parent) {
+vector<Node> NFAToDFA::getDFA(){
+    return DFA;
+}
+
+vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
     vector<Node> nfaChildren = nfaNode.getChildren();
     vector<string> edgeValues = nfaNode.getEdgeValue();
     vector<Node> twins;
@@ -73,7 +78,7 @@ void NFAToDFA::makeChildren(Node DFANode) {
         if (childrenForGivenInput.size() != 0) {
             DFANode.setEdgeValue(currentValue);
             for (int j = 0; j < childrenForGivenInput.size(); ++j) {
-                temp = findNodeTwins(childrenForGivenInput[j], child, DFANode);
+                temp = findNodeTwins(childrenForGivenInput[j], child);
                 for (int k = 1; k < temp.size(); ++k) {
                     childrenForGivenInput.push_back(temp[k]);
                 }

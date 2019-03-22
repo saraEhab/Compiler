@@ -23,11 +23,11 @@ private:
     vector<Node> DFA;
 
 public:
-    void getNFARoot();
+    Node getNFARoot();
 
     void setDFANodeIndex(Node DFANode);
 
-    vector<Node> findNodeTwins(Node nfaNode, Node dfaNode, Node parent);
+    vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
     int isNodeExists(vector<Node> twins);
 
@@ -42,6 +42,8 @@ public:
     vector<Node> findChildrenForGivenInput(string inputValue, Node parent);
 
     void setNodeTwins(vector<Node> twins);
+
+    vector<Node> getDFA();
 };
 
 
