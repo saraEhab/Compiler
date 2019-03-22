@@ -230,6 +230,33 @@ NFAToDFA.cpp.s:
 	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/NFAToDFA.cpp.s
 .PHONY : NFAToDFA.cpp.s
 
+NFAToDFAEngine.obj: NFAToDFAEngine.cpp.obj
+
+.PHONY : NFAToDFAEngine.obj
+
+# target to build an object file
+NFAToDFAEngine.cpp.obj:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/NFAToDFAEngine.cpp.obj
+.PHONY : NFAToDFAEngine.cpp.obj
+
+NFAToDFAEngine.i: NFAToDFAEngine.cpp.i
+
+.PHONY : NFAToDFAEngine.i
+
+# target to preprocess a source file
+NFAToDFAEngine.cpp.i:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/NFAToDFAEngine.cpp.i
+.PHONY : NFAToDFAEngine.cpp.i
+
+NFAToDFAEngine.s: NFAToDFAEngine.cpp.s
+
+.PHONY : NFAToDFAEngine.s
+
+# target to generate assembly for a file
+NFAToDFAEngine.cpp.s:
+	$(MAKE) -f CMakeFiles\Compiler.dir\build.make CMakeFiles/Compiler.dir/NFAToDFAEngine.cpp.s
+.PHONY : NFAToDFAEngine.cpp.s
+
 Node.obj: Node.cpp.obj
 
 .PHONY : Node.obj
@@ -332,6 +359,9 @@ help:
 	@echo ... NFAToDFA.obj
 	@echo ... NFAToDFA.i
 	@echo ... NFAToDFA.s
+	@echo ... NFAToDFAEngine.obj
+	@echo ... NFAToDFAEngine.i
+	@echo ... NFAToDFAEngine.s
 	@echo ... Node.obj
 	@echo ... Node.i
 	@echo ... Node.s

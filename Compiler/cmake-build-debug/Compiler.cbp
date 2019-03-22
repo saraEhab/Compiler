@@ -104,6 +104,12 @@
 		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h">
 			<Option target="Compiler"/>
 		</Unit>
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.cpp">
+			<Option target="Compiler"/>
+		</Unit>
+		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h">
+			<Option target="Compiler"/>
+		</Unit>
 		<Unit filename="E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.cpp">
 			<Option target="Compiler"/>
 		</Unit>
