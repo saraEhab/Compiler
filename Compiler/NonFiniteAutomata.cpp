@@ -7,7 +7,7 @@
 Node root;
 vector<string> differentEdgeValues;
 
-Node NonFiniteAutomata::getNFA() {
+Node NonFiniteAutomata::getNFARoot() {
     return root;
 }
 

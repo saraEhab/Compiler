@@ -12,10 +12,10 @@ using namespace std;
 class NonFiniteAutomata {
 private:
     Node root;
-    vector<string> differentEdgeValues;
+    vector<string> differentEdgeValues;/*contains the different values an edge can take*/
 
 public:
-    Node getNFA();
+    Node getNFARoot();
 
     void setDifferentEdgeValues(string edgeValue);
 

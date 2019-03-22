@@ -3,11 +3,6 @@
 //
 #include "Node.h"
 
-bool status;
-int index;
-vector<Node> children;
-vector<string> edgeValue;
-
 void Node::setStatus(bool statusValue) {
     status = statusValue;
 }
