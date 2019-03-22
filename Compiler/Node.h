@@ -23,7 +23,7 @@ public:
 
     bool getStatus();
 
-    void setIndex(bool indexValue);
+    void setIndex(int indexValue);
 
     int getIndex();
 

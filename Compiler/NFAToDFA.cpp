@@ -9,7 +9,8 @@ void NFAToDFA::getNFARoot() {
 }
 
 void NFAToDFA::setDFANodeIndex(Node DFANode) {
-
+    DFANode.setIndex(lastTakenIndex);
+    lastTakenIndex++;
 }
 
 vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode, Node parent) {}

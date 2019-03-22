@@ -11,7 +11,7 @@ bool Node::getStatus() {
     return status;
 }
 
-void Node::setIndex(bool indexValue) {
+void Node::setIndex(int indexValue) {
     index = indexValue;
 }
 
