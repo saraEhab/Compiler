@@ -58,7 +58,9 @@ void NFAToDFA::setDifferentEdgeValues() {
     differentEdgeValues = nonFiniteAutomata.getDifferentEdgeValues();
 }
 
-Node NFAToDFA::getDFARoot() {}
+Node NFAToDFA::getDFARoot() {
+    return dfa.getDFARoot();
+}
 
 void NFAToDFA::makeChildren(Node DFANode) {}
 
