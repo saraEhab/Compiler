@@ -62,7 +62,34 @@ Node NFAToDFA::getDFARoot() {
     return dfa.getDFARoot();
 }
 
-void NFAToDFA::makeChildren(Node DFANode) {}
+void NFAToDFA::makeChildren(Node DFANode) {
+    string currentValue;
+    vector<Node> childrenForGivenInput;
+    vector<Node> temp;
+    for (int i = 0; i < differentEdgeValues.size(); ++i) {
+        Node child;
+        currentValue = differentEdgeValues[i];
+        childrenForGivenInput = findChildrenForGivenInput(currentValue, DFANode);
+        if (childrenForGivenInput.size() != 0) {
+            DFANode.setEdgeValue(currentValue);
+            for (int j = 0; j < childrenForGivenInput.size(); ++j) {
+                temp = findNodeTwins(childrenForGivenInput[j], child, DFANode);
+                for (int k = 1; k < temp.size(); ++k) {
+                    childrenForGivenInput.push_back(temp[k]);
+                }
+            }
+            int index = isNodeExists(childrenForGivenInput);
+            if (index == -1) {
+                setNodeTwins(childrenForGivenInput);
+                setDFANodeIndex(child);
+                DFANode.setChild(child);
+                DFA.push_back(child);
+            }else{
+                DFANode.setChild(DFA[index]);
+            }
+        }
+    }
+}
 
 vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent) {}
 
