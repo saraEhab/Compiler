@@ -6,39 +6,29 @@
 
 #IncludeRegexTransform: 
 
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.cpp
-DFAAndTokens.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
+Node.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
+Node.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
+NonFiniteAutomata.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
+DFA.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
 
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.cpp
-MinDFA.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
+iostream
+-
 NFAToDFA.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
-Node.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.cpp
-Node.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 vector
 -
 string
 -
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.cpp
-NonFiniteAutomata.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 Node.h
@@ -47,4 +37,6 @@ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/main.cpp
 iostream
 -
+NFAToDFAEngine.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
 

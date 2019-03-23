@@ -23,7 +23,7 @@ private:
     vector<Node> DFA;
 
 public:
-    Node getNFARoot();
+    Node getNFARoot(Node nfaRoot);
 
     void setDFANodeIndex(Node DFANode);
 

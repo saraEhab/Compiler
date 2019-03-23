@@ -4,10 +4,10 @@
 
 #include "NFAToDFAEngine.h"
 
-int NFAToDFAEngine::engine() {
-    nfaToDFA.getNFARoot();
+int NFAToDFAEngine::engine(Node root) {
+    Node nRoot=nfaToDFA.getNFARoot(root);
     nfaToDFA.setDifferentEdgeValues();
-    vector<Node> twins = nfaToDFA.findNodeTwins(nfaToDFA.getNFARoot(), nfaToDFA.getDFARoot());
+    vector<Node> twins = nfaToDFA.findNodeTwins(nRoot, nfaToDFA.getDFARoot());
     if (twins.size()) {
         nfaToDFA.setNodeTwins(twins);
     }

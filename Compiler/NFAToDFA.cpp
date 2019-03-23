@@ -6,8 +6,7 @@
 
 /*this method makes a reference to the root of non finite automaton
  * to work with in this class*/
-Node NFAToDFA::getNFARoot() {
-    nfaRoot = nonFiniteAutomata.getNFARoot();
+Node NFAToDFA::getNFARoot(Node nfaRoot) {
     return nfaRoot;
 }
 

@@ -18,7 +18,7 @@ private:
     NonFiniteAutomata nonFiniteAutomata;
 
 public:
-    int engine();
+    int engine(Node);
 
 };
 
