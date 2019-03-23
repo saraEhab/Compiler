@@ -6,7 +6,7 @@
 
 int NFAToDFAEngine::engine(Node root) {
     Node nRoot=nfaToDFA.getNFARoot(root);
-    nfaToDFA.setDifferentEdgeValues();
+    //nfaToDFA.setDifferentEdgeValues();
     vector<Node> twins = nfaToDFA.findNodeTwins(nRoot, nfaToDFA.getDFARoot());
     if (twins.size()) {
         nfaToDFA.setNodeTwins(twins);

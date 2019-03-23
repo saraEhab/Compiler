@@ -33,7 +33,7 @@ public:
 
     bool isAcceptance(Node node);
 
-    void setDifferentEdgeValues();
+    void setDifferentEdgeValues(vector<string> values);
 
     Node getDFARoot();
 

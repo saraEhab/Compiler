@@ -23,7 +23,7 @@ vector<Node> NFAToDFA::getDFA() {
 
 /*this method finds the nodes that can be reached from a dfaNode by epsilon*/
 vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
-    vector<Node*> nfaChildren = nfaNode.getChildren();
+    vector<Node *> nfaChildren = nfaNode.getChildren();
     vector<string> edgeValues = nfaNode.getEdgeValue();
     vector<Node> twins;
     twins.push_back(nfaNode);
@@ -65,8 +65,10 @@ bool NFAToDFA::isAcceptance(Node node) {
 
 /*this method make a reference to the nfa vector that contains
  * the different input values that have been used for the nfa*/
-void NFAToDFA::setDifferentEdgeValues() {
-    differentEdgeValues = nonFiniteAutomata.getDifferentEdgeValues();
+void NFAToDFA::setDifferentEdgeValues(vector<string> values) {
+    for (int i = 0; i < values.size(); ++i) {
+        differentEdgeValues.push_back(values[i]);
+    }
 }
 
 Node NFAToDFA::getDFARoot() {

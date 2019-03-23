@@ -14,12 +14,12 @@ int main() {
     Node node_4;
     Node node_5;
 
-    Node* nfaRoot_ptr=&nfaRoot;
-    Node* node_1_ptr=&node_1;
-    Node* node_2_ptr=&node_2;
-    Node* node_3_ptr=&node_3;
-    Node* node_4_ptr=&node_4;
-    Node* node_5_ptr=&node_5;
+    Node *nfaRoot_ptr = &nfaRoot;
+    Node *node_1_ptr = &node_1;
+    Node *node_2_ptr = &node_2;
+    Node *node_3_ptr = &node_3;
+    Node *node_4_ptr = &node_4;
+    Node *node_5_ptr = &node_5;
 
     /*make a non finite automaton root*/
     nfaRoot.setStatus(false);
@@ -73,7 +73,8 @@ int main() {
     Node nRoot = nfaToDFA.getNFARoot(nfaRoot);
 
     /*save the different edge values*/
-    nfaToDFA.setDifferentEdgeValues();
+
+    nfaToDFA.setDifferentEdgeValues(nonFiniteAutomata.getDifferentEdgeValues());
 
     /*start working by finding the twins for the dfa root*/
     vector<Node> twins = nfaToDFA.findNodeTwins(nRoot, DFARoot);
