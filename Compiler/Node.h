@@ -15,7 +15,7 @@ class Node {
 private:
     bool status;/*0 means internal node 1 means acceptance node*/
     int index;/*index of the node*/
-    vector<Node> children;
+    vector<Node*> children;
     vector<string> edgeValue;
 
 public:
@@ -27,9 +27,9 @@ public:
 
     int getIndex();
 
-    void setChild(Node child);
+    void setChild(Node* child);
 
-    vector<Node> getChildren();
+    vector<Node*> getChildren();
 
     void setEdgeValue(string edge);
 

@@ -23,15 +23,15 @@ vector<Node> NFAToDFA::getDFA() {
 
 /*this method finds the nodes that can be reached from a dfaNode by epsilon*/
 vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
-    vector<Node> nfaChildren = nfaNode.getChildren();
+    vector<Node*> nfaChildren = nfaNode.getChildren();
     vector<string> edgeValues = nfaNode.getEdgeValue();
     vector<Node> twins;
     twins.push_back(nfaNode);
     for (int i = 0; i < edgeValues.size(); ++i) {
         if (edgeValues[i] == "&") {/*& means epsilon*/
-            twins.push_back(nfaChildren[i]);
+            twins.push_back(*nfaChildren[i]);
         }
-        if (isAcceptance(nfaChildren[i])) {
+        if (isAcceptance(*nfaChildren[i])) {
             dfaNode.setStatus(true);
         }
     }
@@ -94,10 +94,10 @@ void NFAToDFA::makeChildren(Node DFANode) {
             if (index == -1) {
                 setNodeTwins(childrenForGivenInput);
                 setDFANodeIndex(child);
-                DFANode.setChild(child);
+                DFANode.setChild(&child);
                 DFA.push_back(child);
             } else {
-                DFANode.setChild(DFA[index]);
+                DFANode.setChild(&DFA[index]);
             }
         }
     }
@@ -113,7 +113,7 @@ vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent)
         edgeValues = twins[i].getEdgeValue();
         for (int j = 0; j < edgeValues.size(); ++j) {
             if (edgeValues[j] == inputValue) {
-                headings.push_back(twins[i].getChildren()[j]);
+                headings.push_back(*twins[i].getChildren()[j]);
             }
         }
     }
