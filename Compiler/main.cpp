@@ -4,7 +4,7 @@
 int main() {
     NFAToDFA nfaToDFA;
     DFA dfa;
-    vector<Node> dfaGraph;
+    //vector<Node> dfaGraph;
 
 
     Node nfaRoot;
@@ -70,26 +70,26 @@ int main() {
     nonFiniteAutomata.setDifferentEdgeValues("b");
 
     /*send the non finite automaton root to deterministic finite automaton*/
-    Node nRoot = nfaToDFA.getNFARoot(nfaRoot);
+    //Node nRoot = nfaToDFA.getNFARoot(nfaRoot);
 
     /*save the different edge values*/
 
     nfaToDFA.setDifferentEdgeValues(nonFiniteAutomata.getDifferentEdgeValues());
 
     /*start working by finding the twins for the dfa root*/
-    vector<Node> twins = nfaToDFA.findNodeTwins(nRoot, DFARoot);
+    vector<Node> twins = nfaToDFA.findNodeTwins(nonFiniteAutomata.getNFARoot(), DFARoot);
     if (twins.size()) {
         nfaToDFA.setNodeTwins(twins);
     }
 
     /*set the deterministic finite automaton root*/
-    dfa.setDFARoot(twins[0]);
+    dfa.setDFARoot(DFARoot);
     /*save the root in the dfa graph*/
-    dfaGraph.push_back(twins[0]);
-
+    //dfaGraph.push_back(DFARoot);
+    nfaToDFA.getDFA().push_back(&DFARoot);
     /*start making the dfa children and complete the deterministic finite automaton */
-    for (int i = 1; i < dfaGraph.size(); ++i) {
-        nfaToDFA.makeChildren(dfaGraph[i]);
+    for (int i = 0; i < nfaToDFA.getDFA().size(); ++i) {
+        nfaToDFA.makeChildren(*nfaToDFA.getDFA()[i]);
     }
 
     cout << "we finished" << endl;

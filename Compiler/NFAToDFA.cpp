@@ -10,14 +10,10 @@ Node NFAToDFA::getNFARoot(Node nfaRoot) {
     return nfaRoot;
 }
 
-void NFAToDFA::setDFANodeIndex(Node DFANode) {
-    DFANode.setIndex(lastTakenIndex);
-    lastTakenIndex++;
-}
 
 /*this method returns a DFA vector
  * which contains deterministic automaton nodes */
-vector<Node> NFAToDFA::getDFA() {
+vector<Node*> NFAToDFA::getDFA() {
     return DFA;
 }
 
@@ -95,11 +91,12 @@ void NFAToDFA::makeChildren(Node DFANode) {
             int index = isNodeExists(childrenForGivenInput);
             if (index == -1) {
                 setNodeTwins(childrenForGivenInput);
-                setDFANodeIndex(child);
+                child.setIndex(lastTakenIndex);
+                lastTakenIndex++;
                 DFANode.setChild(&child);
-                DFA.push_back(child);
+                DFA.push_back(&child);
             } else {
-                DFANode.setChild(&DFA[index]);
+                DFANode.setChild(DFA[index]);
             }
         }
     }

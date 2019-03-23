@@ -20,12 +20,10 @@ private:
     vector<vector<Node>> nodeTwins;
     int lastTakenIndex = 0;
     vector<string> differentEdgeValues;
-    vector<Node> DFA;
+    vector<Node*> DFA;
 
 public:
     Node getNFARoot(Node nfaRoot);
-
-    void setDFANodeIndex(Node DFANode);
 
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
@@ -43,7 +41,7 @@ public:
 
     void setNodeTwins(vector<Node> twins);
 
-    vector<Node> getDFA();
+    vector<Node*> getDFA();
 };
 
 

@@ -11,7 +11,7 @@ int NFAToDFAEngine::engine(Node root) {
     if (twins.size()) {
         nfaToDFA.setNodeTwins(twins);
     }
-     dfaGraph=nfaToDFA.getDFA();
+    // dfaGraph=nfaToDFA.getDFA();
     dfa.setDFARoot(dfaGraph[0]);
     for (int i = 1; i <dfaGraph.size() ; ++i) {
         nfaToDFA.makeChildren(dfaGraph[i]);
