@@ -86,7 +86,10 @@ int main() {
     dfa.setDFARoot(DFARoot);
     /*save the root in the dfa graph*/
     //dfaGraph.push_back(DFARoot);
-    nfaToDFA.getDFA().push_back(&DFARoot);
+    //Node* DFARoot_ptr=&DFARoot;
+    //vector<Node*> temp= nfaToDFA.getDFA();
+   //temp.push_back(DFARoot_ptr);
+   nfaToDFA.setDFA(&DFARoot);
     /*start making the dfa children and complete the deterministic finite automaton */
     for (int i = 0; i < nfaToDFA.getDFA().size(); ++i) {
         nfaToDFA.makeChildren(*nfaToDFA.getDFA()[i]);

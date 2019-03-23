@@ -17,6 +17,10 @@ vector<Node*> NFAToDFA::getDFA() {
     return DFA;
 }
 
+void NFAToDFA::setDFA(Node * node) {
+    DFA.push_back(node);
+}
+
 /*this method finds the nodes that can be reached from a dfaNode by epsilon*/
 vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
     vector<Node *> nfaChildren = nfaNode.getChildren();
