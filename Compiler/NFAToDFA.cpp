@@ -51,8 +51,8 @@ int NFAToDFA::isNodeExists(vector<Node> twins) {
                 }
             }
         }
-        return index;
     }
+    return index;
 }
 
 bool NFAToDFA::isAcceptance(Node node) {
