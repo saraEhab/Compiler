@@ -11,7 +11,7 @@ bool Node::getStatus() {
     return status;
 }
 
-void Node::setIndex(bool indexValue) {
+void Node::setIndex(int indexValue) {
     index = indexValue;
 }
 
@@ -41,4 +41,12 @@ void Node::setType(string typeValue) {
 
 string Node::getType() {
     return type;
+}
+
+void Node::setParent(Node node) {
+    parent.push_back(node);
+}
+
+vector<Node> Node::getParent() {
+    return parent;
 }

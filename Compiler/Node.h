@@ -17,14 +17,19 @@ private:
     int index;/*index of the node*/
     string type="";/*defines the acceptance node type as id,num,if, then ,....*/
     vector<Node> children;
+    vector<Node> parent;
     vector<string> edgeValue;
 
 public:
+    void setParent(Node node);
+
+    vector<Node> getParent();
+
     void setStatus(bool statusValue);
 
     bool getStatus();
 
-    void setIndex(bool indexValue);
+    void setIndex(int indexValue);
 
     int getIndex();
 
