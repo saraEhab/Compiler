@@ -1,14 +1,18 @@
+#include "Symbol_table_builder.h"
+#include "MinDFA.h"
 #include <iostream>
 #include <bits/stdc++.h>
 
+
 using namespace std;
 
+Symbol_table_builder::Symbol_table_builder(char [] path)
+{
+	code_path = path;
+	read_input_code();
+	print_symbol_table();
+}
 
-char code_path [] = " code path";
-
-vector< symbol_table_entry* > symbol_table;
-MinDFA dfa;
-stack<final_state*> final_states;
 
 string get_token_value(vector<char>* temp_token_value)
 {
@@ -35,20 +39,6 @@ final_state* get_best_fit_node (int token_start_index, int current_index)
     return s;
 }
 
-struct final_state
-{
-    Node* node;
-    string token_value;
-    int token_value_end_index;
-};
-
-struct symbol_table_entry
-{
-    string token_name;
-    string token_value;
-};
-
-
 void fill_symbol_table(string tokenName, string tokenValue, int token_start_index, int current_index)
 {
     symbol_table_entry s;
@@ -61,28 +51,35 @@ void read_input_code ()
 {
     Node current_node;
     int token_start_index = 0;
-    int current_index = 0;
+    int current_index = -1;
     vector<char> temp_token_value;
     ifstream input_code(code_path);
     char input_char;
 
-    while(!input_code.eof() && current_index >= token_start_index)
+    while(!(input_code.eof() && temp_token_value.size() = 0))
     {
-        input_code >> input_char;
+    	if(!input_code.eof())
+    	{
+    		input_code >> input_char;
+    		current_index++;	
+    	} 
 
-        if(input_char == ' ')
+        if(current_index < token_start_index) continue;
+
+        if(input_char == ' ' || input_code.eof())
         {
-            if(temp_token_value.size() > 0 )
+            if(temp_token_value.size() > 0)
             {
-                final_state* fs = get_best_fit_node(token_start_index+1, current_index);
+                final_state* fs = get_best_fit_node(token_start_index, current_index);
                 if(fs != null)
                 {
                     temp_token_value.clear();
-                    current_index = 0;
+                    current_index = -1;
                     token_start_index = fs.token_value_end_index+1;
-                    fill_symbol_table(fs.node.getTokenName(), fs.token_value);    
+                    dfa.resetDFA(); // go back to start state
+                    fill_symbol_table(fs.node.getTokenName(), fs.token_value);
+                    input_code(code_path); // read code file from the beginning    
                 }
-            
             }
 
             continue;
@@ -95,15 +92,13 @@ void read_input_code ()
         {
             final_state f;
             f.node = &current_node;
-            f.token_value_end_index = token_start_index;
+            f.token_value_end_index = current_index ;
             f.token_value = get_token_value(&temp_token_value);
             final_states.push(&f);
         }
 
-        current_index++;
     }
-
-    input_code.close();
+    	input_code.close();
 }
 
 
@@ -119,7 +114,7 @@ void print_symbol_table()
 }
 
 
-int main()
+Symbol_table_builder::~Symbol_table_builder()
 {
-    return 0;
+    
 }
