@@ -4,10 +4,25 @@
 
 #ifndef COMPILER_MINDFA_H
 #define COMPILER_MINDFA_H
+
+#include "Node.h"
+
 using namespace std;
 
 class MinDFA {
+private:
+public:
+    void alterChild(int oldIndex, Node parent, int newIndex);
 
+    void removeFromChildren(int removedIndex, int newIndex);
+
+    void removeFromDFA(int nodeIndex);
+
+    bool isEdgeValuesEqual(vector<string> firstValues, vector<string> secondValues);
+
+    bool isChildrenEqual(vector<Node *> firstChildren, vector<Node *> secondChildren);
+
+    void engine();
 };
 
 
