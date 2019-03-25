@@ -93,7 +93,6 @@ void NFAToDFA::makeChildren(Node* DFANode) {
                 lastTakenIndex++;
                 child->setIndex(lastTakenIndex);
                 DFANode->setChild(child);
-                //child->setParent(DFANode);
                 dfaGraph.push_back(child);
             } else {
                 DFANode->setChild(dfaGraph[index]);
@@ -207,7 +206,5 @@ void NFAToDFA::engine() {
         makeChildren(temp);
 
     }
-
-    cout << "we finished" << endl;
 
 }

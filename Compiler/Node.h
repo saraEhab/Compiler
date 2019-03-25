@@ -13,14 +13,12 @@ using namespace std;
 class Node {
 
 private:
-    Node *parent;
     bool status;/*0 means internal node 1 means acceptance node*/
     int index;/*index of the node*/
     vector<Node *> children;
     vector<string> edgeValue;
 
 public:
-    void setParent(Node parentNode);
 
     void setStatus(bool statusValue);
 

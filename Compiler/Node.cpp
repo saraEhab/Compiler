@@ -35,7 +35,3 @@ void Node::setEdgeValue(string edge) {
 vector<string> Node::getEdgeValue() {
     return edgeValue;
 }
-
-void Node::setParent(Node parentNode) {
-    parent = &parentNode;
-}

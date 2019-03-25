@@ -6,7 +6,5 @@ int main() {
     nfaToDFA.engine();
     Node dfaRoot;
     dfaRoot=(nfaToDFA.dfa.getDFARoot());
-    cout<<"we get it :D"<<endl;
-
     return 0;
 }
