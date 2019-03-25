@@ -20,10 +20,11 @@ private:
     vector<vector<Node>> nodeTwins;
     int lastTakenIndex = 0;
     vector<string> differentEdgeValues;
-    vector<Node *> dfaGraph;
 
 public:
+
     DFA dfa;
+    vector<Node *> dfaGraph;
 
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
