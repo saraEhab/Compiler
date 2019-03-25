@@ -4,7 +4,6 @@
 #include "Node.h"
 
 
-
 void Node::setStatus(bool statusValue) {
     status = statusValue;
 }
@@ -21,11 +20,11 @@ int Node::getIndex() {
     return index;
 }
 
-void Node::setChild(Node* child) {
+void Node::setChild(Node *child) {
     children.push_back(child);
 }
 
-vector<Node*> Node::getChildren() {
+vector<Node *> Node::getChildren() {
     return children;
 }
 
@@ -35,4 +34,8 @@ void Node::setEdgeValue(string edge) {
 
 vector<string> Node::getEdgeValue() {
     return edgeValue;
+}
+
+void Node::setParent(Node parentNode) {
+    parent = &parentNode;
 }

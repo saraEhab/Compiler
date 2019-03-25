@@ -13,12 +13,15 @@ using namespace std;
 class Node {
 
 private:
+    Node *parent;
     bool status;/*0 means internal node 1 means acceptance node*/
     int index;/*index of the node*/
-    vector<Node*> children;
+    vector<Node *> children;
     vector<string> edgeValue;
 
 public:
+    void setParent(Node parentNode);
+
     void setStatus(bool statusValue);
 
     bool getStatus();
@@ -27,9 +30,9 @@ public:
 
     int getIndex();
 
-    void setChild(Node* child);
+    void setChild(Node *child);
 
-    vector<Node*> getChildren();
+    vector<Node *> getChildren();
 
     void setEdgeValue(string edge);
 

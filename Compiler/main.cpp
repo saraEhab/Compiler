@@ -19,7 +19,7 @@ int main() {
     Node *node_4_ptr = &node_4;
     Node *node_5_ptr = &node_5;
 
-    /*make a non finite automaton root*/
+    /*make a non finite automaton nodes*/
     nfaRoot.setStatus(false);
     nfaRoot.setIndex(0);
     nfaRoot.setChild(node_1_ptr);
@@ -67,7 +67,6 @@ int main() {
     nonFiniteAutomata.setDifferentEdgeValues("b");
 
     /*save the different edge values*/
-
     nfaToDFA.setDifferentEdgeValues(nonFiniteAutomata.getDifferentEdgeValues());
 
     /*start working by finding the twins for the dfa root*/
@@ -78,9 +77,10 @@ int main() {
 
     /*set the deterministic finite automaton root*/
     dfa.setDFARoot(DFARoot);
-    /*save the root in the dfa graph*/
 
+    /*save the root in the dfa graph*/
     nfaToDFA.setDFA(dfaRoot_ptr);
+
     /*start making the dfa children and complete the deterministic finite automaton */
     for (int i = 0; i < nfaToDFA.getDFA().size(); ++i) {
         nfaToDFA.makeChildren(*nfaToDFA.getDFA()[i]);

@@ -10,6 +10,12 @@ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
 Node.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp
+iostream
+-
+NFAToDFA.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
+
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
 Node.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
