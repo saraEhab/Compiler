@@ -4,8 +4,6 @@
 int main() {
     NFAToDFA nfaToDFA;
     DFA dfa;
-    //vector<Node> dfaGraph;
-
 
     Node nfaRoot;
     Node node_1;
@@ -56,10 +54,9 @@ int main() {
     node_3_ptr->setChild(nfaRoot_ptr);
 
 
-
-
     /*make a root for deterministic finite automaton*/
     Node DFARoot;
+    Node *dfaRoot_ptr = &DFARoot;
     DFARoot.setIndex(0);
 
     /*set the non finite automaton root*/
@@ -68,9 +65,6 @@ int main() {
 
     nonFiniteAutomata.setDifferentEdgeValues("a");
     nonFiniteAutomata.setDifferentEdgeValues("b");
-
-    /*send the non finite automaton root to deterministic finite automaton*/
-    //Node nRoot = nfaToDFA.getNFARoot(nfaRoot);
 
     /*save the different edge values*/
 
@@ -85,11 +79,8 @@ int main() {
     /*set the deterministic finite automaton root*/
     dfa.setDFARoot(DFARoot);
     /*save the root in the dfa graph*/
-    //dfaGraph.push_back(DFARoot);
-    //Node* DFARoot_ptr=&DFARoot;
-    //vector<Node*> temp= nfaToDFA.getDFA();
-   //temp.push_back(DFARoot_ptr);
-   nfaToDFA.setDFA(&DFARoot);
+
+    nfaToDFA.setDFA(dfaRoot_ptr);
     /*start making the dfa children and complete the deterministic finite automaton */
     for (int i = 0; i < nfaToDFA.getDFA().size(); ++i) {
         nfaToDFA.makeChildren(*nfaToDFA.getDFA()[i]);

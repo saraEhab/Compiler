@@ -14,7 +14,6 @@ using namespace std;
 
 class NFAToDFA {
 private:
-    Node nfaRoot;
     NonFiniteAutomata nonFiniteAutomata;
     DFA dfa;
     vector<vector<Node>> nodeTwins;
@@ -23,7 +22,6 @@ private:
     vector<Node *> DFA;
 
 public:
-    Node getNFARoot(Node nfaRoot);
 
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 

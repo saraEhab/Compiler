@@ -4,13 +4,6 @@
 
 #include "NFAToDFA.h"
 
-/*this method makes a reference to the root of non finite automaton
- * to work with in this class*/
-Node NFAToDFA::getNFARoot(Node nfaRoot) {
-    return nfaRoot;
-}
-
-
 /*this method returns a DFA vector
  * which contains deterministic automaton nodes */
 vector<Node*> NFAToDFA::getDFA() {
@@ -81,13 +74,13 @@ void NFAToDFA::makeChildren(Node DFANode) {
     vector<Node> childrenForGivenInput;
     vector<Node> temp;
     for (int i = 0; i < differentEdgeValues.size(); ++i) {
-        Node child;
+        Node* child= new Node();
         currentValue = differentEdgeValues[i];
         childrenForGivenInput = findChildrenForGivenInput(currentValue, DFANode);
         if (childrenForGivenInput.size() != 0) {
             DFANode.setEdgeValue(currentValue);
             for (int j = 0; j < childrenForGivenInput.size(); ++j) {
-                temp = findNodeTwins(childrenForGivenInput[j], child);
+                temp = findNodeTwins(childrenForGivenInput[j], *child);
                 for (int k = 1; k < temp.size(); ++k) {
                     childrenForGivenInput.push_back(temp[k]);
                 }
@@ -95,10 +88,10 @@ void NFAToDFA::makeChildren(Node DFANode) {
             int index = isNodeExists(childrenForGivenInput);
             if (index == -1) {
                 setNodeTwins(childrenForGivenInput);
-                child.setIndex(lastTakenIndex);
                 lastTakenIndex++;
-                DFANode.setChild(&child);
-                DFA.push_back(&child);
+                child->setIndex(lastTakenIndex);
+                DFANode.setChild(child);
+                DFA.push_back(child);
             } else {
                 DFANode.setChild(DFA[index]);
             }
