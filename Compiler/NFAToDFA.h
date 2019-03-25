@@ -31,8 +31,6 @@ public:
 
     void setDifferentEdgeValues(vector<string> values);
 
-    Node getDFARoot();
-
     void makeChildren(Node DFANode);
 
     vector<Node> findChildrenForGivenInput(string inputValue, Node parent);

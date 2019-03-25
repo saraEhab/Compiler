@@ -6,11 +6,11 @@
 
 /*this method returns a DFA vector
  * which contains deterministic automaton nodes */
-vector<Node*> NFAToDFA::getDFA() {
+vector<Node *> NFAToDFA::getDFA() {
     return DFA;
 }
 
-void NFAToDFA::setDFA(Node * node) {
+void NFAToDFA::setDFA(Node *node) {
     DFA.push_back(node);
 }
 
@@ -64,9 +64,6 @@ void NFAToDFA::setDifferentEdgeValues(vector<string> values) {
     }
 }
 
-Node NFAToDFA::getDFARoot() {
-    return dfa.getDFARoot();
-}
 
 /*this method assign the dfa parent node to its dfa children*/
 void NFAToDFA::makeChildren(Node DFANode) {
@@ -74,7 +71,7 @@ void NFAToDFA::makeChildren(Node DFANode) {
     vector<Node> childrenForGivenInput;
     vector<Node> temp;
     for (int i = 0; i < differentEdgeValues.size(); ++i) {
-        Node* child= new Node();
+        Node *child = new Node();
         currentValue = differentEdgeValues[i];
         childrenForGivenInput = findChildrenForGivenInput(currentValue, DFANode);
         if (childrenForGivenInput.size() != 0) {
