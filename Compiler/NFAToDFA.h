@@ -14,6 +14,7 @@ using namespace std;
 
 class NFAToDFA {
 private:
+
     Node DFARoot;
     NonFiniteAutomata nonFiniteAutomata;
     vector<vector<Node>> nodeTwins;
@@ -22,6 +23,7 @@ private:
     vector<Node *> dfaGraph;
 
 public:
+    DFA dfa;
 
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
@@ -31,7 +33,7 @@ public:
 
     void setDifferentEdgeValues(vector<string> values);
 
-    void makeChildren(Node* DFANode);
+    void makeChildren(Node *DFANode);
 
     vector<Node> findChildrenForGivenInput(string inputValue, Node parent);
 

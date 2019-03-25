@@ -102,6 +102,7 @@ void NFAToDFA::makeChildren(Node* DFANode) {
     }
     if (DFANode->getIndex() == 0) {
         DFARoot = *DFANode;
+        dfa.setDFARoot(&DFARoot);
     }
 }
 
