@@ -4,8 +4,8 @@
 
 #include "DFA.h"
 
-void DFA::setDFARoot(Node root) {
-    DFARoot = &root;
+void DFA::setDFARoot(Node* root) {
+    DFARoot = *root;
 }
 
-Node* DFA::getDFARoot() { return DFARoot; }
+Node DFA::getDFARoot() { return DFARoot; }

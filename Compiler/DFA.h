@@ -11,11 +11,11 @@ using namespace std;
 
 class DFA {
 private:
-    Node* DFARoot;
+    Node DFARoot;
 
 public:
-    Node* getDFARoot();
-    void setDFARoot(Node);
+    Node getDFARoot();
+    void setDFARoot(Node*);
 
 };
 
