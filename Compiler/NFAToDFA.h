@@ -27,9 +27,9 @@ public:
 
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
-    int isNodeExists(vector<Node> twins);
+    int findNodeIndexInsideNodeTwins(vector<Node> twins);
 
-    bool isAcceptance(Node node);
+    bool isAcceptance(vector<Node> childrenForGivenInput);
 
     void setDifferentEdgeValues(vector<string> values);
 

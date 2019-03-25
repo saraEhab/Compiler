@@ -17,16 +17,17 @@ void NFAToDFA::setDFA(Node *node) {
 
 /*this method finds the nodes that can be reached from a dfaNode by epsilon*/
 vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
-    vector<Node *> nfaChildren = nfaNode.getChildren();
-    vector<string> edgeValues = nfaNode.getEdgeValue();
+    vector<Node *> nfaChildren;
+    vector<string> edgeValues;
     vector<Node> twins;
     twins.push_back(nfaNode);
-    for (int i = 0; i < edgeValues.size(); ++i) {
-        if (edgeValues[i] == "&") {/*& means epsilon*/
-            twins.push_back(*nfaChildren[i]);
-        }
-        if (isAcceptance(*nfaChildren[i])) {
-            dfaNode.setStatus(true);
+    for (int j = 0; j < twins.size(); ++j) {
+        nfaChildren = twins[j].getChildren();
+        edgeValues = twins[j].getEdgeValue();
+        for (int i = 0; i < edgeValues.size(); ++i) {
+            if (edgeValues[i] == "&") {/*& means epsilon*/
+                twins.push_back(*nfaChildren[i]);
+            }
         }
     }
     return twins;
@@ -34,7 +35,7 @@ vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
 
 /*check if the new state (new nod) that will be added to the dfa graph
  * is already exists or its a new state*/
-int NFAToDFA::isNodeExists(vector<Node> twins) {
+int NFAToDFA::findNodeIndexInsideNodeTwins(vector<Node> twins) {
     vector<Node> twin_i;
     int index = -1;
     for (int i = 0; i < nodeTwins.size(); ++i) {
@@ -46,7 +47,7 @@ int NFAToDFA::isNodeExists(vector<Node> twins) {
                     break;
                 } else {
                     index = i;
-                    i=nodeTwins.size();
+                    i = nodeTwins.size();
                     break;
                 }
             }
@@ -55,9 +56,11 @@ int NFAToDFA::isNodeExists(vector<Node> twins) {
     return index;
 }
 
-bool NFAToDFA::isAcceptance(Node node) {
-    if (node.getStatus() == true)
-        return true;
+bool NFAToDFA::isAcceptance(vector<Node> childrenForGivenInput) {
+    for (int i = 0; i < childrenForGivenInput.size(); ++i) {
+        if (childrenForGivenInput[i].getStatus())
+            return true;
+    }
     return false;
 }
 
@@ -69,9 +72,17 @@ void NFAToDFA::setDifferentEdgeValues(vector<string> values) {
     }
 }
 
+bool isExist(Node child, vector<Node> childrenForGivenInput) {
+    for (int i = 0; i < childrenForGivenInput.size(); ++i) {
+        if (child.getIndex() == childrenForGivenInput[i].getIndex())
+            return true;
+    }
+    return false;
+}
+
 
 /*this method assign the dfa parent node to its dfa children*/
-void NFAToDFA::makeChildren(Node* DFANode) {
+void NFAToDFA::makeChildren(Node *DFANode) {
     string currentValue;
     vector<Node> childrenForGivenInput;
     vector<Node> temp;
@@ -84,14 +95,20 @@ void NFAToDFA::makeChildren(Node* DFANode) {
             for (int j = 0; j < childrenForGivenInput.size(); ++j) {
                 temp = findNodeTwins(childrenForGivenInput[j], *child);
                 for (int k = 1; k < temp.size(); ++k) {
-                    childrenForGivenInput.push_back(temp[k]);
+                    /*check to avoid duplicates*/
+                    if (!isExist(temp[k], childrenForGivenInput)) {
+                        childrenForGivenInput.push_back(temp[k]);
+                    }
                 }
             }
-            int index = isNodeExists(childrenForGivenInput);
+            int index = findNodeIndexInsideNodeTwins(childrenForGivenInput);
             if (index == -1) {
                 setNodeTwins(childrenForGivenInput);
                 lastTakenIndex++;
                 child->setIndex(lastTakenIndex);
+                if (isAcceptance(childrenForGivenInput)) {
+                    child->setStatus(true);
+                }
                 DFANode->setChild(child);
                 dfaGraph.push_back(child);
             } else {
@@ -137,6 +154,11 @@ void NFAToDFA::engine() {
     Node node_3;
     Node node_4;
     Node node_5;
+    Node node_6;
+    Node node_7;
+    Node node_8;
+    Node node_9;
+    Node node_10;
 
     Node *nfaRoot_ptr = &nfaRoot;
     Node *node_1_ptr = &node_1;
@@ -144,24 +166,36 @@ void NFAToDFA::engine() {
     Node *node_3_ptr = &node_3;
     Node *node_4_ptr = &node_4;
     Node *node_5_ptr = &node_5;
+    Node *node_6_ptr = &node_6;
+    Node *node_7_ptr = &node_7;
+    Node *node_8_ptr = &node_8;
+    Node *node_9_ptr = &node_9;
+    Node *node_10_ptr = &node_10;
 
     nfaRoot.setStatus(false);
     nfaRoot.setIndex(0);
     nfaRoot.setChild(node_1_ptr);
-    nfaRoot.setChild(node_4_ptr);
+    nfaRoot.setChild(node_7_ptr);
     nfaRoot.setEdgeValue("&");
     nfaRoot.setEdgeValue("&");
-
 
     node_1.setStatus(false);
     node_1.setIndex(1);
-    node_1.setEdgeValue("a");
+    node_1.setEdgeValue("&");
+    node_1.setEdgeValue("&");
     node_1_ptr->setChild(node_2_ptr);
+    node_1_ptr->setChild(node_4_ptr);
 
     node_2.setStatus(false);
     node_2.setIndex(2);
-    node_2.setEdgeValue("&");
+    node_2.setEdgeValue("a");
     node_2_ptr->setChild(node_3_ptr);
+
+
+    node_3.setStatus(false);
+    node_3.setIndex(3);
+    node_3.setEdgeValue("&");
+    node_3_ptr->setChild(node_6_ptr);
 
     node_4.setStatus(false);
     node_4.setIndex(4);
@@ -171,12 +205,33 @@ void NFAToDFA::engine() {
     node_5.setStatus(false);
     node_5.setIndex(5);
     node_5.setEdgeValue("&");
-    node_5_ptr->setChild(node_3_ptr);
+    node_5_ptr->setChild(node_6_ptr);
 
-    node_3.setStatus(false);
-    node_3.setIndex(3);
-    node_3.setEdgeValue("&");
-    node_3_ptr->setChild(nfaRoot_ptr);
+    node_6.setStatus(false);
+    node_6.setIndex(6);
+    node_6.setEdgeValue("&");
+    node_6.setEdgeValue("&");
+    node_6_ptr->setChild(node_1_ptr);
+    node_6_ptr->setChild(node_7_ptr);
+
+    node_7.setStatus(false);
+    node_7.setIndex(7);
+    node_7.setEdgeValue("a");
+    node_7_ptr->setChild(node_8_ptr);
+
+    node_8.setStatus(false);
+    node_8.setIndex(8);
+    node_8.setEdgeValue("b");
+    node_8_ptr->setChild(node_9_ptr);
+
+    node_9.setStatus(false);
+    node_9.setIndex(9);
+    node_9.setEdgeValue("b");
+    node_9_ptr->setChild(node_10_ptr);
+
+    node_10.setStatus(true);
+    node_10.setIndex(10);
+
 
 
     /*make a root for deterministic finite automaton*/
