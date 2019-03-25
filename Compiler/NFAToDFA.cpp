@@ -53,7 +53,9 @@ int NFAToDFA::isNodeExists(vector<Node> twins) {
 }
 
 bool NFAToDFA::isAcceptance(Node node) {
-    return node.getStatus();
+    if (node.getStatus() == true)
+        return true;
+    return false;
 }
 
 /*this method make a reference to the nfa vector that contains

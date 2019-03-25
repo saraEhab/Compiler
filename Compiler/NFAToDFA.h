@@ -15,7 +15,6 @@ using namespace std;
 class NFAToDFA {
 private:
     NonFiniteAutomata nonFiniteAutomata;
-    DFA dfa;
     vector<vector<Node>> nodeTwins;
     int lastTakenIndex = 0;
     vector<string> differentEdgeValues;
