@@ -14,11 +14,12 @@ using namespace std;
 
 class NFAToDFA {
 private:
+    Node DFARoot;
     NonFiniteAutomata nonFiniteAutomata;
     vector<vector<Node>> nodeTwins;
     int lastTakenIndex = 0;
     vector<string> differentEdgeValues;
-    vector<Node *> DFA;
+    vector<Node *> dfaGraph;
 
 public:
 
@@ -30,7 +31,7 @@ public:
 
     void setDifferentEdgeValues(vector<string> values);
 
-    void makeChildren(Node DFANode);
+    void makeChildren(Node* DFANode);
 
     vector<Node> findChildrenForGivenInput(string inputValue, Node parent);
 
@@ -39,6 +40,8 @@ public:
     vector<Node *> getDFA();
 
     void setDFA(Node *);
+
+    void engine();
 };
 
 

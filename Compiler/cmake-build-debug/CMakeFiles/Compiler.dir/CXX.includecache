@@ -24,12 +24,6 @@ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomat
 DFA.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
 
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
-iostream
--
-NFAToDFA.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
-
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 vector
 -
@@ -39,10 +33,4 @@ string
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 Node.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/main.cpp
-iostream
--
-NFAToDFAEngine.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
 
