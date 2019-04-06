@@ -32,6 +32,8 @@ public:
 
     vector<Node *> getChildren();
 
+    void alterChild(int index , Node* newChild);
+
     void setEdgeValue(string edge);
 
     vector<string> getEdgeValue();

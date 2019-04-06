@@ -28,6 +28,10 @@ vector<Node *> Node::getChildren() {
     return children;
 }
 
+void Node::alterChild(int index , Node* newChild){
+    children[index]=newChild;
+}
+
 void Node::setEdgeValue(string edge) {
     edgeValue.push_back(edge);
 }

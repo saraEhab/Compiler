@@ -17,14 +17,6 @@ int main() {
     MinDFA minDFA;
     minDFA.engine();
 
-    //    NFAToDFA nfaToDFA;
-//    nfaToDFA.engine();
-//    Node dfaRoot;
-//    dfaRoot = (nfaToDFA.dfa.getDFARoot());
-//
-//    MinDFA minDFA;
-//    minDFA.engine(nfaToDFA.dfaGraph);
-
     cout << "done :D" << endl;
     return 0;
 }
