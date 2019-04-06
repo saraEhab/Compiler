@@ -4,8 +4,19 @@
 
 #include "MinDFA.h"
 
+static MinDFA *insatnce = nullptr;
+
+/*Singleton*/
+MinDFA *MinDFA::getInstance() {
+    if (insatnce == nullptr) {
+        insatnce = new MinDFA();
+    }
+    return insatnce;
+}
+
+
 void MinDFA::alterChild(int oldIndex, Node *parent, int newIndex) {
-    parent->alterChild(oldIndex,nfaToDFA->dfaGraph[newIndex]);
+    parent->alterChild(oldIndex, nfaToDFA->dfaGraph[newIndex]);
 }
 
 void MinDFA::removeFromChildren(int removedIndex, int newIndex) {
@@ -64,11 +75,14 @@ void MinDFA::engine() {
     int removedIndex = -1, newIndex = -1, size = nfaToDFA->dfaGraph.size();
     for (int i = 0; i < size; ++i) {
         for (int j = i + 1; j < size; ++j) {
-            if ((isEdgeValuesEqual(nfaToDFA->dfaGraph[i]->getEdgeValue(), nfaToDFA->dfaGraph[j]->getEdgeValue())) &&
+            if ((nfaToDFA->dfaGraph[i]->getStatus() == nfaToDFA->dfaGraph[j]->getStatus()) &&
+                (isEdgeValuesEqual(nfaToDFA->dfaGraph[i]->getEdgeValue(), nfaToDFA->dfaGraph[j]->getEdgeValue())) &&
                 (isChildrenEqual(nfaToDFA->dfaGraph[i]->getChildren(), nfaToDFA->dfaGraph[j]->getChildren()))) {
                 removedIndex = j;
                 newIndex = i;
                 removeFromChildren(removedIndex, newIndex);
+                size--;
+                j--;
             }
         }
     }

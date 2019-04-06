@@ -14,8 +14,11 @@ int main() {
     Node *temp = &dfaRoot;
     nfaToDFA->dfaGraph[0] = temp;
 
-    MinDFA minDFA;
-    minDFA.engine();
+    Node *minDfaRoot;
+
+    MinDFA *minDFA = MinDFA::getInstance();
+    minDFA->engine();
+    minDfaRoot = minDFA->minDFARoot;
 
     cout << "done :D" << endl;
     return 0;

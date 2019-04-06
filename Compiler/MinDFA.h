@@ -13,8 +13,12 @@ using namespace std;
 class MinDFA {
 private:
     NFAToDFA *nfaToDFA = NFAToDFA::getInstance();
-    Node *minDFARoot;
+
 public:
+
+    Node *minDFARoot;
+    static MinDFA* getInstance();
+
     void alterChild(int oldIndex, Node* parent, int newIndex);
 
     void removeFromChildren(int removedIndex, int newIndex);

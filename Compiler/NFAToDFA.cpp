@@ -7,6 +7,7 @@
 
 static NFAToDFA *insatnce = nullptr;
 
+/*Singleton*/
 NFAToDFA *NFAToDFA::getInstance() {
     if (insatnce == nullptr) {
         insatnce = new NFAToDFA();
@@ -25,10 +26,10 @@ void NFAToDFA::setDFA(Node *node) {
 }
 
 /*this method finds the nodes that can be reached from a dfaNode by epsilon*/
-vector <Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
-    vector < Node * > nfaChildren;
-    vector <string> edgeValues;
-    vector <Node> twins;
+vector<Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
+    vector<Node *> nfaChildren;
+    vector<string> edgeValues;
+    vector<Node> twins;
     twins.push_back(nfaNode);
     for (int j = 0; j < twins.size(); ++j) {
         nfaChildren = twins[j].getChildren();
@@ -44,8 +45,8 @@ vector <Node> NFAToDFA::findNodeTwins(Node nfaNode, Node dfaNode) {
 
 /*check if the new state (new nod) that will be added to the dfa graph
  * is already exists or its a new state*/
-int NFAToDFA::findNodeIndexInsideNodeTwins(vector <Node> twins) {
-    vector <Node> twin_i;
+int NFAToDFA::findNodeIndexInsideNodeTwins(vector<Node> twins) {
+    vector<Node> twin_i;
     int index = -1;
     for (int i = 0; i < nodeTwins.size(); ++i) {
         twin_i = nodeTwins[i];
@@ -65,7 +66,7 @@ int NFAToDFA::findNodeIndexInsideNodeTwins(vector <Node> twins) {
     return index;
 }
 
-bool NFAToDFA::isAcceptance(vector <Node> childrenForGivenInput) {
+bool NFAToDFA::isAcceptance(vector<Node> childrenForGivenInput) {
     for (int i = 0; i < childrenForGivenInput.size(); ++i) {
         if (childrenForGivenInput[i].getStatus())
             return true;
@@ -75,13 +76,13 @@ bool NFAToDFA::isAcceptance(vector <Node> childrenForGivenInput) {
 
 /*this method make a reference to the nfa vector that contains
  * the different input values that have been used for the nfa*/
-void NFAToDFA::setDifferentEdgeValues(vector <string> values) {
+void NFAToDFA::setDifferentEdgeValues(vector<string> values) {
     for (int i = 0; i < values.size(); ++i) {
         differentEdgeValues.push_back(values[i]);
     }
 }
 
-bool isExist(Node child, vector <Node> childrenForGivenInput) {
+bool isExist(Node child, vector<Node> childrenForGivenInput) {
     for (int i = 0; i < childrenForGivenInput.size(); ++i) {
         if (child.getIndex() == childrenForGivenInput[i].getIndex())
             return true;
@@ -93,8 +94,8 @@ bool isExist(Node child, vector <Node> childrenForGivenInput) {
 /*this method assign the dfa parent node to its dfa children*/
 void NFAToDFA::makeChildren(Node *DFANode) {
     string currentValue;
-    vector <Node> childrenForGivenInput;
-    vector <Node> temp;
+    vector<Node> childrenForGivenInput;
+    vector<Node> temp;
     for (int i = 0; i < differentEdgeValues.size(); ++i) {
         Node *child = new Node();
         currentValue = differentEdgeValues[i];
@@ -132,11 +133,11 @@ void NFAToDFA::makeChildren(Node *DFANode) {
 }
 
 /*search in the nfa to find the children for a nfa node under a given input*/
-vector <Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent) {
-    vector <Node> headings;
-    vector <string> edgeValues;
+vector<Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent) {
+    vector<Node> headings;
+    vector<string> edgeValues;
     int parentIndex = parent.getIndex();
-    vector <Node> twins = nodeTwins[parentIndex];
+    vector<Node> twins = nodeTwins[parentIndex];
     for (int i = 0; i < twins.size(); ++i) {
         edgeValues = twins[i].getEdgeValue();
         for (int j = 0; j < edgeValues.size(); ++j) {
@@ -150,7 +151,7 @@ vector <Node> NFAToDFA::findChildrenForGivenInput(string inputValue, Node parent
 
 /*set the nodeTwins vector
  * which contains the different values for each state in the dfa graph*/
-void NFAToDFA::setNodeTwins(vector <Node> twins) {
+void NFAToDFA::setNodeTwins(vector<Node> twins) {
     nodeTwins.push_back(twins);
 }
 
@@ -259,7 +260,7 @@ void NFAToDFA::engine() {
     setDifferentEdgeValues(nonFiniteAutomata.getDifferentEdgeValues());
 
     /*start working by finding the twins for the dfa root*/
-    vector <Node> twins = findNodeTwins(nonFiniteAutomata.getNFARoot(), DFARoot);
+    vector<Node> twins = findNodeTwins(nonFiniteAutomata.getNFARoot(), DFARoot);
     if (twins.size()) {
         setNodeTwins(twins);
     }
