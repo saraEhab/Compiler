@@ -9,8 +9,12 @@ CMakeFiles/Compiler.dir/DFAAndTokens.cpp.obj
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.cpp
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFAAndTokens.h
 CMakeFiles/Compiler.dir/MinDFA.cpp.obj
+ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.cpp
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
+ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
+ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
+ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 CMakeFiles/Compiler.dir/NFAToDFA.cpp.obj
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp
@@ -33,6 +37,7 @@ CMakeFiles/Compiler.dir/NonFiniteAutomata.cpp.obj
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 CMakeFiles/Compiler.dir/main.cpp.obj
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
+ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
  E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h

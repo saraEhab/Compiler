@@ -26,6 +26,8 @@ public:
     DFA dfa;
     vector<Node *> dfaGraph;
 
+    static NFAToDFA* getInstance();
+
     vector<Node> findNodeTwins(Node nfaNode, Node dfaNode);
 
     int findNodeIndexInsideNodeTwins(vector<Node> twins);

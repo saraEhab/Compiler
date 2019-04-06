@@ -8,8 +8,12 @@ CMakeFiles/Compiler.dir/DFA.cpp.obj: ../Node.h
 CMakeFiles/Compiler.dir/DFAAndTokens.cpp.obj: ../DFAAndTokens.cpp
 CMakeFiles/Compiler.dir/DFAAndTokens.cpp.obj: ../DFAAndTokens.h
 
+CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../DFA.h
 CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../MinDFA.cpp
 CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../MinDFA.h
+CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../NFAToDFA.h
+CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../Node.h
+CMakeFiles/Compiler.dir/MinDFA.cpp.obj: ../NonFiniteAutomata.h
 
 CMakeFiles/Compiler.dir/NFAToDFA.cpp.obj: ../DFA.h
 CMakeFiles/Compiler.dir/NFAToDFA.cpp.obj: ../NFAToDFA.cpp
@@ -32,6 +36,7 @@ CMakeFiles/Compiler.dir/NonFiniteAutomata.cpp.obj: ../NonFiniteAutomata.cpp
 CMakeFiles/Compiler.dir/NonFiniteAutomata.cpp.obj: ../NonFiniteAutomata.h
 
 CMakeFiles/Compiler.dir/main.cpp.obj: ../DFA.h
+CMakeFiles/Compiler.dir/main.cpp.obj: ../MinDFA.h
 CMakeFiles/Compiler.dir/main.cpp.obj: ../NFAToDFA.h
 CMakeFiles/Compiler.dir/main.cpp.obj: ../NFAToDFAEngine.h
 CMakeFiles/Compiler.dir/main.cpp.obj: ../Node.h

@@ -10,6 +10,12 @@ E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
 Node.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
 
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
+Node.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/Node.h
+NFAToDFA.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.h
+
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFA.cpp
 iostream
 -
@@ -23,10 +29,6 @@ NonFiniteAutomata.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NonFiniteAutomata.h
 DFA.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/DFA.h
-
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.cpp
-NFAToDFAEngine.h
-E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
 
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
 iostream
@@ -49,4 +51,6 @@ iostream
 -
 NFAToDFAEngine.h
 E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/NFAToDFAEngine.h
+MinDFA.h
+E:/3rd year 2nd semester/compiler/project/git/Compiler/Compiler/MinDFA.h
 

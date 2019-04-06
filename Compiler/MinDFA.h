@@ -6,13 +6,15 @@
 #define COMPILER_MINDFA_H
 
 #include "Node.h"
+#include "NFAToDFA.h"
 
 using namespace std;
 
 class MinDFA {
 private:
+    NFAToDFA *nfaToDFA = NFAToDFA::getInstance();
 public:
-    void alterChild(int oldIndex, Node parent, int newIndex);
+    void alterChild(int oldIndex, Node* parent, int newIndex);
 
     void removeFromChildren(int removedIndex, int newIndex);
 
